@@ -44,30 +44,6 @@ stats <- ddply(data, .(date), summarise,
 
 time_stats <- ddply(data, .(interval_dt), summarise,
                 "avg_steps_per_int" = mean(steps, na.rm = T))
-
-print(head(data))
-```
-
-```
-##   steps       date interval         interval_dt    date_dt
-## 1    NA 2012-10-01        0 2014-12-14 00:00:00 2012-10-01
-## 2    NA 2012-10-01        5 2014-12-14 00:05:00 2012-10-01
-## 3    NA 2012-10-01       10 2014-12-14 00:10:00 2012-10-01
-## 4    NA 2012-10-01       15 2014-12-14 00:15:00 2012-10-01
-## 5    NA 2012-10-01       20 2014-12-14 00:20:00 2012-10-01
-## 6    NA 2012-10-01       25 2014-12-14 00:25:00 2012-10-01
-```
-
-```r
-#print(data)
-
-
-
-#print(class(data$interval_dt[1]))
-
-#print(stats)
-
-#print(head(time_stats))
 ```
 
 ## What is mean total number of steps taken per day?
